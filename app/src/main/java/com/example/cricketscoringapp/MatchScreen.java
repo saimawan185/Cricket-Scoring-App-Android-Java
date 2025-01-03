@@ -28,7 +28,7 @@ public class MatchScreen extends AppCompatActivity {
     private ImageView muteUnmuteIcon;
     private ArrayList<PlayerModel> firstTeamPlayers, secondTeamPlayers, team1Ballers, team2Ballers;
 
-    private Button one, two, three, four, five, six, zero, noBall, wicket, wide, bies;
+    private Button one, two, three, four, five, six, zero, noBall, wicket, wide;
 
     private TextView playerOneNameText, playerTwoNameText, playerOneRunsText, playerTwoRunsText, ballerNameText, ballerOverviewText,
             totalRunsText, totalWicketsText, totalOversText;
@@ -145,7 +145,7 @@ public class MatchScreen extends AppCompatActivity {
         noBall = findViewById(R.id.noBall);
         wicket = findViewById(R.id.wicket);
         wide = findViewById(R.id.wide);
-        bies = findViewById(R.id.bies);
+
         playerOneNameText = findViewById(R.id.player1Name);
         playerOneRunsText = findViewById(R.id.player1Runs);
         playerTwoNameText = findViewById(R.id.player2Name);
@@ -167,7 +167,6 @@ public class MatchScreen extends AppCompatActivity {
         noBallClick();
         wicketClick();
         wideClick();
-        biesClick();
     }
 
     private void setupToolbar() {
@@ -243,14 +242,6 @@ public class MatchScreen extends AppCompatActivity {
             totalRuns++;
             ballerRuns++;
             checkTargetAchieved();
-            setFields();
-        });
-    }
-
-    private void biesClick() {
-        bies.setOnClickListener(v -> {
-            totalRuns++;
-            ballPlay();
             setFields();
         });
     }
