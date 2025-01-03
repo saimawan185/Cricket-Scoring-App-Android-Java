@@ -1,4 +1,4 @@
-# Couchbase Lite
+# Cricket Scoring App
 
 Cricket Scoring App in Android Java.
 
